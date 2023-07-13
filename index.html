@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* Additional styles for login box */
+        #login-box {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            width: 200px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+        }
+        #login-box label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        #login-box input[type="text"],
+        #login-box input[type="password"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        #login-box button {
+            width: 100%;
+            padding: 8px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #content {
+            margin-top: 40px;
+            margin-left: 240px;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-box">
+        <h3>Login</h3>
+        <label>Username:</label>
+        <input type="text" id="username" name="username" />
+        <label>Password:</label>
+        <input type="password" id="password" name="password" />
+        <button id="login-btn">Login</button>
+    </div>
+
+    <div id="content">
+        <div id="wrapper">
+            <div id="note-editor">
+                <h2 id="note-editor-title">Task Management System</h2>
+                <label>Title:</label>
+                <input type="text" id="title" name="title" />
+                <label>Body:</label>
+                <textarea rows="10" cols="42" id="message" name="message"></textarea>
+                <label>Color:</label>
+                <select id="color" name="color">
+                    <option value="red" selected>Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                </select>
+                <div id="button">
+                    <button id="add-btn">Create Note</button>
+                    <div id="error"></div>
+                </div>
+            </div>
+
+            <div id="notes-section">
+                <h2>Notes</h2>
+                <ul id="notes"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
